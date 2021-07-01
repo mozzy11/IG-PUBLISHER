@@ -103,7 +103,8 @@
       "ImplementationGuide.definition.resource"
     ],
     "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lis-patient-identifier-location": [
-      "Identifier"
+      "Identifier",
+      "Patient.identifier"
     ]
   }
 }

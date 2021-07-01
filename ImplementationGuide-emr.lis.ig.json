@@ -11,7 +11,7 @@
   "title": "EMR-LIS Implementation Guide",
   "status": "draft",
   "experimental": true,
-  "date": "2021-07-01T13:57:40+00:00",
+  "date": "2021-07-01T19:28:03+00:00",
   "publisher": "I-TECH-UW",
   "contact": [
     {
@@ -500,6 +500,20 @@
         "name": "EMR-LIS Logical Model",
         "description": "EMR-LIS Communication Logical Model",
         "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/example-emr-lis-patient"
+        },
+        "name": "OpenMRS Patient",
+        "description": "Example OpenMRS Patient",
+        "exampleCanonical": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-patient"
       }
     ],
     "page": {
