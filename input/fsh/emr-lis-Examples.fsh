@@ -12,6 +12,7 @@ Title:   "OpenMRS Patient"
 * identifier[0].extension.valueReference.reference = "Location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f"
 * identifier[0].extension.valueReference.type = #Location
 * identifier[0].extension.valueReference.display = "Unknown Location"
+* identifier[0].system = "http://moh.bw.org/ext/identifier/omang"
 * identifier[1].id = "75a67d54-6fff-44d1-9c3e-2116c967b475"
 * identifier[1].use = #usual
 * identifier[1].type.text = "Code National"
@@ -27,5 +28,5 @@ Title:   "OpenMRS Patient"
 * name.given = "Piotr"
 * deceasedBoolean =  false
 * address.id = "d4f7c809-3d01-4032-b64d-4c22e8eccbbc"
-* address.use = "home"
+* address.use = #home
 * address.country = "haiti"
