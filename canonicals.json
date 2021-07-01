@@ -1,0 +1,100 @@
+[
+  {
+    "id": "emr.lis.ig",
+    "type": "ImplementationGuide",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/ImplementationGuide/emr.lis.ig",
+    "version": "0.2.0",
+    "name": "EmrLisIg"
+  },
+  {
+    "id": "EmrLisLogicalModel",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/EmrLisLogicalModel",
+    "version": "0.2.0",
+    "name": "EmrLisLogicalModel"
+  },
+  {
+    "id": "emr-lab-diagnostic-report",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-diagnostic-report",
+    "version": "0.2.0",
+    "name": "EmrLisDiagnosticReport"
+  },
+  {
+    "id": "emr-lab-encounter",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-encounter",
+    "version": "0.2.0",
+    "name": "EmrLisEncounter"
+  },
+  {
+    "id": "emr-lab-observation",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-observation",
+    "version": "0.2.0",
+    "name": "EmrLisObservation"
+  },
+  {
+    "id": "emr-lab-openmrs-identifier",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-openmrs-identifier",
+    "version": "0.2.0",
+    "name": "EmrLisOpenmrsIdentifier"
+  },
+  {
+    "id": "emr-lab-patient",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-patient",
+    "version": "0.2.0",
+    "name": "EmrLisPatient"
+  },
+  {
+    "id": "emr-lab-service-request",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-service-request",
+    "version": "0.2.0",
+    "name": "EmrLisServiceRequest"
+  },
+  {
+    "id": "emr-lab-task",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-task",
+    "version": "0.2.0",
+    "name": "EmrLisTask"
+  },
+  {
+    "id": "emr-lis-patient-identifier-location",
+    "type": "StructureDefinition",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lis-patient-identifier-location",
+    "version": "0.2.0",
+    "name": "EmrLisPatientIdentifierLocationExtension"
+  },
+  {
+    "id": "emr-lab-diagnostic-report-status-vs",
+    "type": "ValueSet",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-diagnostic-report-status-vs",
+    "version": "0.2.0",
+    "name": "EmrLisDiagnosticReportStatusVS"
+  },
+  {
+    "id": "emr-lab-order-code-vs",
+    "type": "ValueSet",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-order-code-vs",
+    "version": "0.2.0",
+    "name": "EmrLisOrderCodeVS"
+  },
+  {
+    "id": "emr-lab-task-intent-vs",
+    "type": "ValueSet",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-task-intent-vs",
+    "version": "0.2.0",
+    "name": "EmrLisTaskIntentVS"
+  },
+  {
+    "id": "emr-lab-task-status-vs",
+    "type": "ValueSet",
+    "url": "http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-task-status-vs",
+    "version": "0.2.0",
+    "name": "EmrLisTaskStatusVS"
+  }
+]

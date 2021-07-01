@@ -1,0 +1,653 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 101, errors = 6, warn = 32, info = 0 -->
+<head>
+  <title>EmrLisIg : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for EmrLisIg</h1>
+ <p>Generated Thu Jul 01 13:40:08 UTC 2021, FHIR version 4.0.1 for emr.lis.ig#0.2.0 (canonical = <a href="http://i-tech-uw.github.io/emr-lis-ig">http://i-tech-uw.github.io/emr-lis-ig</a> (<a href="http://i-tech-uw.github.io/emr-lis-ig/history.html">history</a>)). See <a href="/github/workspace/output/qa.html">Full QA Report</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.76</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = emr.lis.ig, Canonical = http://i-tech-uw.github.io/emr-lis-ig</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>0.2.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
+ <tr><td>Supressed Messages:</td><td><a href="#suppressed">5 Suppressed Issues</a>
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> emr.lis.ig</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.2.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://i-tech-uw.github.io/emr-lis-ig</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.ips</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.0.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/ips</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/ips/STU1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: openhie.fhir.template#0.1.0 -&gt; fhir.base.template#0.2.1</para></div></td></tr>
+ <tr><td>Publication Rules:</td><td>Code = n/a. n/a - not an HL7.org or FHIR.org implementation guide
+ <br/><br/>The copyrightYear parameter ('2021+') in the IG resource is good</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://i-tech-uw.github.io/emr-lis-ig (Problem #1 with package-list.json at http://i-tech-uw.github.io/emr-lis-ig: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 2 column 2 path $)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 101, errors = 6, warn = 32, info = 0</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>101</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-EmrLisLogicalModel"><b>/github/workspace/fsh-generated/resources/StructureDefinition-EmrLisLogicalModel</b></a></td><td><b>1</b></td><td><b>8</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-diagnostic-report"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-diagnostic-report</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-encounter"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-encounter</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-observation"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-observation</b></a></td><td><b>3</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-openmrs-identifier"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-openmrs-identifier</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-patient"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-patient</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-service-request"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-service-request</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-task"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-task</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-emr-lis-patient-identifier-location"><b>/github/workspace/fsh-generated/resources/StructureDefinition-emr-lis-patient-identifier-location</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-emr-lab-diagnostic-report-status-vs"><b>/github/workspace/fsh-generated/resources/ValueSet-emr-lab-diagnostic-report-status-vs</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-emr-lab-task-intent-vs"><b>/github/workspace/fsh-generated/resources/ValueSet-emr-lab-task-intent-vs</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-emr-lab-task-status-vs"><b>/github/workspace/fsh-generated/resources/ValueSet-emr-lab-task-status-vs</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel-definitions.html#7667b59d-0e2c-47ca-9f46-9d613e010bce">StructureDefinition-EmrLisLogicalModel-definitions.html#/html/body/div/div/div/p/a at Line 315, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel-examples.html#eae3b0e0-78c9-4f96-8dc1-d8b152303e90">StructureDefinition-EmrLisLogicalModel-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel-mappings.html#38998016-da13-44ff-b64c-dababeb20c9a">StructureDefinition-EmrLisLogicalModel-mappings.html#/html/body/div/div/div/p/a at Line 309, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel.html#0a2b382d-fdd2-47b4-8a41-61802df9d459">StructureDefinition-EmrLisLogicalModel.html#/html/body/div/div/div/p/a at Line 510, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel.profile.history.html#d58ac360-de9f-413d-8903-b3269b6f4fcd">StructureDefinition-EmrLisLogicalModel.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel.profile.json.html#2039c512-052c-4fbb-81c1-e6869fdf40d3">StructureDefinition-EmrLisLogicalModel.profile.json.html#/html/body/div/div/div/p/a at Line 755, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel.profile.ttl.html#5e6fcb61-4bdd-4094-a8d7-28a13c92d425">StructureDefinition-EmrLisLogicalModel.profile.ttl.html#/html/body/div/div/div/p/a at Line 671, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-EmrLisLogicalModel.profile.xml.html#0c904998-8c33-4089-bf75-3be0fbdf2ed6">StructureDefinition-EmrLisLogicalModel.profile.xml.html#/html/body/div/div/div/p/a at Line 690, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report-definitions.html#7a00fa79-9371-4d56-af49-fd3392655ad1">StructureDefinition-emr-lab-diagnostic-report-definitions.html#/html/body/div/div/div/p/a at Line 753, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report-examples.html#872ae3fb-e6e7-4d59-9e17-576341773deb">StructureDefinition-emr-lab-diagnostic-report-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report-mappings.html#173357d2-d0d5-4063-8ed1-0cfa51b97fd6">StructureDefinition-emr-lab-diagnostic-report-mappings.html#/html/body/div/div/div/p/a at Line 363, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report.html#7d9b6c20-7740-43fa-8d66-c3c9d98e7373">StructureDefinition-emr-lab-diagnostic-report.html#/html/body/div/div/div/p/a at Line 792, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report.profile.history.html#aaf8a2d9-875e-4e45-9cb2-dad95503f175">StructureDefinition-emr-lab-diagnostic-report.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report.profile.json.html#e5499f3a-2023-47ac-9aca-3dc231f67deb">StructureDefinition-emr-lab-diagnostic-report.profile.json.html#/html/body/div/div/div/p/a at Line 2627, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report.profile.ttl.html#47273482-c0a5-4e64-9d1e-1e86f483f142">StructureDefinition-emr-lab-diagnostic-report.profile.ttl.html#/html/body/div/div/div/p/a at Line 2385, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-diagnostic-report.profile.xml.html#c964b338-117f-4117-b233-ccc72f84eb80">StructureDefinition-emr-lab-diagnostic-report.profile.xml.html#/html/body/div/div/div/p/a at Line 2356, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter-definitions.html#9d54994e-c5d5-4f65-b94a-18bafbaf360d">StructureDefinition-emr-lab-encounter-definitions.html#/html/body/div/div/div/p/a at Line 954, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter-examples.html#c1075674-39c0-47ad-a90a-820657664c0d">StructureDefinition-emr-lab-encounter-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter-mappings.html#e77cbcee-f3a1-4ff5-ba89-e77e9bc9214f">StructureDefinition-emr-lab-encounter-mappings.html#/html/body/div/div/div/p/a at Line 422, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter.html#a1bb5772-251e-4586-8371-9036eb1820d0">StructureDefinition-emr-lab-encounter.html#/html/body/div/div/div/p/a at Line 894, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter.profile.history.html#2dfaed33-4d10-4f1c-b440-e506e7441f2b">StructureDefinition-emr-lab-encounter.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter.profile.json.html#58967d87-b1b1-4952-b620-21d6830e66ae">StructureDefinition-emr-lab-encounter.profile.json.html#/html/body/div/div/div/p/a at Line 3779, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter.profile.ttl.html#3fb4b423-9646-49c9-af78-7550d41e1f22">StructureDefinition-emr-lab-encounter.profile.ttl.html#/html/body/div/div/div/p/a at Line 3331, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-encounter.profile.xml.html#bfe1d14a-9a1b-46c8-8738-1b2d59a96ec1">StructureDefinition-emr-lab-encounter.profile.xml.html#/html/body/div/div/div/p/a at Line 3335, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation-definitions.html#0911e0ba-2b92-4718-930f-d2ca97de4999">StructureDefinition-emr-lab-observation-definitions.html#/html/body/div/div/div/p/a at Line 1101, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation-examples.html#cd713479-9d6d-4a1f-9365-54a52535eaa8">StructureDefinition-emr-lab-observation-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation-mappings.html#6fab588a-9155-4103-844f-598114d6b490">StructureDefinition-emr-lab-observation-mappings.html#/html/body/div/div/div/p/a at Line 461, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation.html#86be7682-f643-488d-b473-5f4de1c2af68">StructureDefinition-emr-lab-observation.html#/html/body/div/div/div/p/a at Line 1094, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation.profile.history.html#552998fc-24eb-4ea3-b407-a75fe391c2a4">StructureDefinition-emr-lab-observation.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation.profile.json.html#22ace3e4-8c13-4bcf-a1e0-9b41f9af0630">StructureDefinition-emr-lab-observation.profile.json.html#/html/body/div/div/div/p/a at Line 4224, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation.profile.ttl.html#de615f36-361e-40d7-998b-b0df3756a2cb">StructureDefinition-emr-lab-observation.profile.ttl.html#/html/body/div/div/div/p/a at Line 3734, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-observation.profile.xml.html#8a319a64-ba47-49d4-b852-db2f30a6630a">StructureDefinition-emr-lab-observation.profile.xml.html#/html/body/div/div/div/p/a at Line 3849, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier-definitions.html#821597d1-6360-449a-a8ec-e7c8cfd5d0e7">StructureDefinition-emr-lab-openmrs-identifier-definitions.html#/html/body/div/div/div/p/a at Line 369, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier-examples.html#19a5529a-e81e-4267-a577-d0f63e50f730">StructureDefinition-emr-lab-openmrs-identifier-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier-mappings.html#24579345-c39e-4e3d-95e6-6bf245b1a61e">StructureDefinition-emr-lab-openmrs-identifier-mappings.html#/html/body/div/div/div/p/a at Line 300, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier.html#7b76b459-dc1b-4ac6-9fb3-b4deae61ada9">StructureDefinition-emr-lab-openmrs-identifier.html#/html/body/div/div/div/p/a at Line 549, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier.profile.history.html#7ecd7c40-810c-42ef-9285-1dabbcd0d3fc">StructureDefinition-emr-lab-openmrs-identifier.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier.profile.json.html#0fa52020-f2e1-4a9b-9428-31127d880959">StructureDefinition-emr-lab-openmrs-identifier.profile.json.html#/html/body/div/div/div/p/a at Line 840, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier.profile.ttl.html#f6e68d62-5ceb-4a51-9478-935d4c9be0f3">StructureDefinition-emr-lab-openmrs-identifier.profile.ttl.html#/html/body/div/div/div/p/a at Line 771, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-openmrs-identifier.profile.xml.html#50d8511d-7fac-470c-81c7-b2f99b2c947f">StructureDefinition-emr-lab-openmrs-identifier.profile.xml.html#/html/body/div/div/div/p/a at Line 770, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient-definitions.html#0f04cac4-a459-442e-bf5b-7b1da6b078c3">StructureDefinition-emr-lab-patient-definitions.html#/html/body/div/div/div/p/a at Line 862, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient-examples.html#130004d2-0a0a-493a-bfec-01ebcd43ce3f">StructureDefinition-emr-lab-patient-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient-mappings.html#61d40f0b-a564-4ae5-86b2-1307470e9a7a">StructureDefinition-emr-lab-patient-mappings.html#/html/body/div/div/div/p/a at Line 397, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient.html#b0b9340d-dde3-4f60-9462-68068ce7a7ea">StructureDefinition-emr-lab-patient.html#/html/body/div/div/div/p/a at Line 864, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient.profile.history.html#30f7a465-baee-44da-8e86-dcf51ccb10b5">StructureDefinition-emr-lab-patient.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient.profile.json.html#ad20ed60-328e-4cfc-8d66-3fa55b589584">StructureDefinition-emr-lab-patient.profile.json.html#/html/body/div/div/div/p/a at Line 2993, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient.profile.ttl.html#2a972fcf-f2dc-4a66-929d-fda5f15de9fb">StructureDefinition-emr-lab-patient.profile.ttl.html#/html/body/div/div/div/p/a at Line 2626, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-patient.profile.xml.html#d5791981-7815-4d55-acbd-b8132ebb9952">StructureDefinition-emr-lab-patient.profile.xml.html#/html/body/div/div/div/p/a at Line 2734, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request-definitions.html#a2b6e0bb-0c5b-47f8-9e69-ba408d28afb5">StructureDefinition-emr-lab-service-request-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 431, column 262</a></b></td><td><b>error</b></td><td><b>The link 'valueset-diagnostic-requests.html' for &quot;here&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request-definitions.html#7dee88bf-5ff1-4270-aa42-e34fe0898b14">StructureDefinition-emr-lab-service-request-definitions.html#/html/body/div/div/div/p/a at Line 733, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request-examples.html#67626159-877d-44ff-bc1a-90e703858d2e">StructureDefinition-emr-lab-service-request-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request-mappings.html#c9542a4a-5d00-4dbd-ba05-fbd4362b26ac">StructureDefinition-emr-lab-service-request-mappings.html#/html/body/div/div/div/p/a at Line 416, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.html#ecf6eb27-1dc8-40c9-aa83-872e2b1c0e80">StructureDefinition-emr-lab-service-request.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 336, column 2449</a></b></td><td><b>error</b></td><td><b>The link 'valueset-diagnostic-requests.html' for &quot;here&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.html#204ffce8-3a3e-45ae-9b10-9b163ae7d3a0">StructureDefinition-emr-lab-service-request.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 526, column 2449</a></b></td><td><b>error</b></td><td><b>The link 'valueset-diagnostic-requests.html' for &quot;here&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.html#868adf88-ef26-4df1-8bd4-53d640c9e372">StructureDefinition-emr-lab-service-request.html#/html/body/div/div/div/p/a at Line 782, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.profile.history.html#bdfd59b4-50bf-4e3a-a009-a193e57d487a">StructureDefinition-emr-lab-service-request.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.profile.json.html#ec9c2497-2c02-46f0-b75d-717cd1ee16b4">StructureDefinition-emr-lab-service-request.profile.json.html#/html/body/div/div/div/p/a at Line 2802, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.profile.ttl.html#f77fa2af-f432-4e03-a45f-382023531c59">StructureDefinition-emr-lab-service-request.profile.ttl.html#/html/body/div/div/div/p/a at Line 2496, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-service-request.profile.xml.html#5b362348-7d07-45e8-9247-7fa9f6ae4ef5">StructureDefinition-emr-lab-service-request.profile.xml.html#/html/body/div/div/div/p/a at Line 2526, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task-definitions.html#9447bfff-7965-46d7-922f-f13e31205d66">StructureDefinition-emr-lab-task-definitions.html#/html/body/div/div/div/p/a at Line 854, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task-examples.html#9a4cf210-8c3a-4004-9922-be333f2fdff5">StructureDefinition-emr-lab-task-examples.html#/html/body/div/div/div/p/a at Line 272, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task-mappings.html#c1231c73-bdcf-43b8-8d33-03ae49cf7cb7">StructureDefinition-emr-lab-task-mappings.html#/html/body/div/div/div/p/a at Line 387, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task.html#f216f3d1-bf7b-41f7-87aa-ab44ebe3b868">StructureDefinition-emr-lab-task.html#/html/body/div/div/div/p/a at Line 1049, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task.profile.history.html#cb08bb46-31bc-4193-bdf6-826cf108491c">StructureDefinition-emr-lab-task.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task.profile.json.html#6dba439a-9e5c-494a-ac10-a9b7651d3312">StructureDefinition-emr-lab-task.profile.json.html#/html/body/div/div/div/p/a at Line 3348, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task.profile.ttl.html#f0b62e09-590e-433c-8018-01d895824323">StructureDefinition-emr-lab-task.profile.ttl.html#/html/body/div/div/div/p/a at Line 2937, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lab-task.profile.xml.html#58d4864f-78df-4d92-94f9-14542caf8db0">StructureDefinition-emr-lab-task.profile.xml.html#/html/body/div/div/div/p/a at Line 2988, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location-definitions.html#e3d37b3f-157e-487c-9215-b64125f55624">StructureDefinition-emr-lis-patient-identifier-location-definitions.html#/html/body/div/div/div/p/a at Line 308, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location-mappings.html#38ce0610-805e-4a9d-9410-3ca214d82c6d">StructureDefinition-emr-lis-patient-identifier-location-mappings.html#/html/body/div/div/div/p/a at Line 278, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location.html#c2055709-ab85-4a27-bd46-c5b1014c5ebe">StructureDefinition-emr-lis-patient-identifier-location.html#/html/body/div/div/div/p/a at Line 479, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location.profile.history.html#be2f3b0f-de3d-4965-8181-8a625917c844">StructureDefinition-emr-lis-patient-identifier-location.profile.history.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location.profile.json.html#2cac630c-cabd-40b1-a399-d20ca7b84cef">StructureDefinition-emr-lis-patient-identifier-location.profile.json.html#/html/body/div/div/div/p/a at Line 558, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location.profile.ttl.html#7aa1b848-c5e6-46b5-a2bf-b8494f8153fd">StructureDefinition-emr-lis-patient-identifier-location.profile.ttl.html#/html/body/div/div/div/p/a at Line 534, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-emr-lis-patient-identifier-location.profile.xml.html#0951d2e8-43e0-46c3-8d23-90bf33c40fa0">StructureDefinition-emr-lis-patient-identifier-location.profile.xml.html#/html/body/div/div/div/p/a at Line 512, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-diagnostic-report-status-vs.change.history.html#aa88a8c6-ba93-4b25-b715-708e3ae3e740">ValueSet-emr-lab-diagnostic-report-status-vs.change.history.html#/html/body/div/div/div/p/a at Line 240, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-diagnostic-report-status-vs.html#cd440e94-f852-4073-9de7-834da030a841">ValueSet-emr-lab-diagnostic-report-status-vs.html#/html/body/div/div/div/p/a at Line 288, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-diagnostic-report-status-vs.json.html#2c6aa266-85a6-4e4f-b86b-48de7c9ca956">ValueSet-emr-lab-diagnostic-report-status-vs.json.html#/html/body/div/div/div/p/a at Line 287, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-diagnostic-report-status-vs.ttl.html#18dfc67d-8d3c-4c20-94b0-32c1ef9fb873">ValueSet-emr-lab-diagnostic-report-status-vs.ttl.html#/html/body/div/div/div/p/a at Line 289, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-diagnostic-report-status-vs.xml.html#f059599b-fc4c-41d3-b234-4be2aed77b3a">ValueSet-emr-lab-diagnostic-report-status-vs.xml.html#/html/body/div/div/div/p/a at Line 281, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-order-code-vs.change.history.html#57bce269-47c0-49fe-8ba3-ce343db978c9">ValueSet-emr-lab-order-code-vs.change.history.html#/html/body/div/div/div/p/a at Line 240, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-order-code-vs.html#89bc5384-8dca-4068-acb5-bf3085bbeaec">ValueSet-emr-lab-order-code-vs.html#/html/body/div/div/div/p/a at Line 289, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-order-code-vs.json.html#bf5d2bfd-d239-4fe7-b696-e8a4706ed513">ValueSet-emr-lab-order-code-vs.json.html#/html/body/div/div/div/p/a at Line 265, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-order-code-vs.ttl.html#6b9bfbcb-0bd6-45b2-a272-789d6937f672">ValueSet-emr-lab-order-code-vs.ttl.html#/html/body/div/div/div/p/a at Line 273, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-order-code-vs.xml.html#68438b1f-b928-4b9a-aa08-9abd54c11a61">ValueSet-emr-lab-order-code-vs.xml.html#/html/body/div/div/div/p/a at Line 260, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-intent-vs.change.history.html#53f26c6d-026d-4b62-8744-7a31841519f8">ValueSet-emr-lab-task-intent-vs.change.history.html#/html/body/div/div/div/p/a at Line 240, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-intent-vs.html#716bdeec-3cd4-44d0-b1d2-96be2fc3a2b0">ValueSet-emr-lab-task-intent-vs.html#/html/body/div/div/div/p/a at Line 289, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-intent-vs.json.html#bd20f7e1-a5fc-4117-858a-b33eb605a0ef">ValueSet-emr-lab-task-intent-vs.json.html#/html/body/div/div/div/p/a at Line 271, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-intent-vs.ttl.html#57ee178d-a869-488a-90c3-85e0df103b4d">ValueSet-emr-lab-task-intent-vs.ttl.html#/html/body/div/div/div/p/a at Line 277, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-intent-vs.xml.html#a98b532d-4ee6-4d85-93ca-ec84bb779e4f">ValueSet-emr-lab-task-intent-vs.xml.html#/html/body/div/div/div/p/a at Line 265, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-status-vs.change.history.html#4fc32781-3e8f-472e-a800-7680f4bb7f21">ValueSet-emr-lab-task-status-vs.change.history.html#/html/body/div/div/div/p/a at Line 240, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-status-vs.html#2a37d632-1243-4fad-a222-d2cbc1260e70">ValueSet-emr-lab-task-status-vs.html#/html/body/div/div/div/p/a at Line 289, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-status-vs.json.html#cc51f8ea-ca77-4910-8efa-3ab7061a15ed">ValueSet-emr-lab-task-status-vs.json.html#/html/body/div/div/div/p/a at Line 283, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-status-vs.ttl.html#5a968cae-e43e-4edc-85f6-5d196d592b4d">ValueSet-emr-lab-task-status-vs.ttl.html#/html/body/div/div/div/p/a at Line 286, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-emr-lab-task-status-vs.xml.html#d8342e72-54e6-41c8-b686-35801eb157bd">ValueSet-emr-lab-task-status-vs.xml.html#/html/body/div/div/div/p/a at Line 277, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#af828e63-efb2-4033-af72-f25f977a3498">artifacts.html#/html/body/div/div/div/p/a at Line 387, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="background.html#a92d12bf-968f-49f3-af0f-123792a4bacd">background.html#/html/body/div/div/div/p/a at Line 190, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="changes.html#9212f96b-887e-4478-80c5-6b64f8ac5400">changes.html#/html/body/div/div/div/p/a at Line 193, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="downloads.html#55f8b982-c5c7-4b2c-8ba7-24cc4bf7fba6">downloads.html#/html/body/div/div/div/p/a at Line 221, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#f71309ba-d01b-4f91-aa95-f1d27ae7ab41">index.html#/html/body/div/div/div/p/a at Line 219, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="spec.html#68eb41db-8766-4bb3-8aff-dbce4c31e51d">spec.html#/html/body/div/div/div/p/a at Line 199, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#7dd63b8a-1fb1-45c8-8543-2a92cfb0da71">toc.html#/html/body/div/div/div/p/a at Line 182, column 28</a></b></td><td><b>error</b></td><td><b>The link 'www.github.com/i-tech-uw' for &quot;I-TECH-UW&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-EmrLisLogicalModel"> </a>
+<h2><a href="StructureDefinition-EmrLisLogicalModel.html">/github/workspace/fsh-generated/resources/StructureDefinition-EmrLisLogicalModel.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[3]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[4]</b></td><td><b>error</b></td><td title="sdf-10: 'provide either a binding reference or a description (or both)' Rule 'provide either a binding reference or a description (or both)' Failed"><b>sdf-10: 'provide either a binding reference or a description (or both)' Rule 'provide either a binding reference or a description (or both)' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[4]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[5]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[6]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[0]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[1]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[2]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[3]</b></td><td><b>warning</b></td><td title="eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed"><b>eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Rule 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' Failed</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-diagnostic-report"> </a>
+<h2><a href="StructureDefinition-emr-lab-diagnostic-report.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-diagnostic-report.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>EMR-LIS Diagnostic Report.DiagnosticReport.status</b></td><td><b>error</b></td><td title=""><b>Binding http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-diagnostic-report-status-vs is not a subset of binding http://hl7.org/fhir/ValueSet/diagnostic-report-status|4.0.1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition</b></td><td><b>error</b></td><td title=""><b>Binding http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-diagnostic-report-status-vs is not a subset of binding http://hl7.org/fhir/ValueSet/diagnostic-report-status|4.0.1</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-diagnostic-report')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-encounter"> </a>
+<h2><a href="StructureDefinition-emr-lab-encounter.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-encounter.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-encounter')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-observation"> </a>
+<h2><a href="StructureDefinition-emr-lab-observation.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-observation.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-observation#Observation.specimen</b></td><td><b>error</b></td><td title=""><b>The profile http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips has type Specimen which is not consistent with the stated type CodeableConcept</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element.where(path = 'Observation.specimen')</b></td><td><b>error</b></td><td title=""><b>The profile http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips has type Specimen which is not consistent with the stated type CodeableConcept</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[44].type[0].profile[0]</b></td><td><b>error</b></td><td title="SD_ED_TYPE_PROFILE_WRONG"><b>Profile http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips is for type StructureDefinition[http://hl7.org/fhir/StructureDefinition/Specimen], but the Observation.specimen element has type CodeableConcept</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-observation')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-openmrs-identifier"> </a>
+<h2><a href="StructureDefinition-emr-lab-openmrs-identifier.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-openmrs-identifier.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-openmrs-identifier')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this data type profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-patient"> </a>
+<h2><a href="StructureDefinition-emr-lab-patient.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-patient.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-patient')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-service-request"> </a>
+<h2><a href="StructureDefinition-emr-lab-service-request.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-service-request.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-service-request')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lab-task"> </a>
+<h2><a href="StructureDefinition-emr-lab-task.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-task.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>EMR-LIS Workflow Task Resource.Task.status</b></td><td><b>warning</b></td><td title=""><b>Binding http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-task-status-vs could not be expanded</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>EMR-LIS Workflow Task Resource.Task.intent</b></td><td><b>warning</b></td><td title=""><b>Binding http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-task-intent-vs could not be expanded</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition</b></td><td><b>warning</b></td><td title=""><b>Binding http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-task-status-vs could not be expanded</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition</b></td><td><b>warning</b></td><td title=""><b>Binding http://i-tech-uw.github.io/emr-lis-ig/ValueSet/emr-lab-task-intent-vs could not be expanded</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lab-task')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-emr-lis-patient-identifier-location"> </a>
+<h2><a href="StructureDefinition-emr-lis-patient-identifier-location.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lis-patient-identifier-location.json</a></h2>
+ <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://i-tech-uw.github.io/emr-lis-ig/StructureDefinition/emr-lis-patient-identifier-location')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_ValueSet-emr-lab-diagnostic-report-status-vs"> </a>
+<h2><a href="ValueSet-emr-lab-diagnostic-report-status-vs.html">/github/workspace/fsh-generated/resources/ValueSet-emr-lab-diagnostic-report-status-vs.json</a></h2>
+ <ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[0]</b></td><td><b>warning</b></td><td title=""><b>The code diagnostic-report-status-partial is not valid in the system http://hl7.org/fhir/diagnostic-report-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[1]</b></td><td><b>warning</b></td><td title=""><b>The code diagnostic-report-status-final is not valid in the system http://hl7.org/fhir/diagnostic-report-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[2]</b></td><td><b>warning</b></td><td title=""><b>The code diagnostic-report-status-unknown is not valid in the system http://hl7.org/fhir/diagnostic-report-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code diagnostic-report-status-canceled is not valid in the system http://hl7.org/fhir/diagnostic-report-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[4]</b></td><td><b>warning</b></td><td title=""><b>The code diagnostic-report-status-amended is not valid in the system http://hl7.org/fhir/diagnostic-report-status</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_ValueSet-emr-lab-task-intent-vs"> </a>
+<h2><a href="ValueSet-emr-lab-task-intent-vs.html">/github/workspace/fsh-generated/resources/ValueSet-emr-lab-task-intent-vs.json</a></h2>
+ <ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[0]</b></td><td><b>warning</b></td><td title=""><b>The code task-intent-order is not valid in the system http://hl7.org/fhir/ValueSet/task-intent</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.where(id = 'emr-lab-task-intent-vs')</b></td><td><b>warning</b></td><td title=""><b>Error from server: Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-intent</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_ValueSet-emr-lab-task-status-vs"> </a>
+<h2><a href="ValueSet-emr-lab-task-status-vs.html">/github/workspace/fsh-generated/resources/ValueSet-emr-lab-task-status-vs.json</a></h2>
+ <ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[0]</b></td><td><b>warning</b></td><td title=""><b>The code task-status-requested is not valid in the system http://hl7.org/fhir/ValueSet/task-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[1]</b></td><td><b>warning</b></td><td title=""><b>The code task-status-rejected is not valid in the system http://hl7.org/fhir/ValueSet/task-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[2]</b></td><td><b>warning</b></td><td title=""><b>The code task-status-accepted is not valid in the system http://hl7.org/fhir/ValueSet/task-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose[0].include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code task-status-completed is not valid in the system http://hl7.org/fhir/ValueSet/task-status</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.where(id = 'emr-lab-task-status-vs')</b></td><td><b>warning</b></td><td title=""><b>Error from server: Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-status</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p><b>If this was a real IG, there should be examples for these profiles too.  But it's not, and I'm lazy...</b></p><ul>
+ <li>WARNING: http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation: The Implementation Guide contains no examples for this profile</li>
+ <li>WARNING: http://somewhere.org/fhir/uv/myig/StructureDefinition/mypractitioner: The Implementation Guide contains no examples for this profile</li>
+</ul>
+<p><b>This is inherited from the base resource</b></p><ul>
+ <li>WARNING: StructureDefinition/myObservation: StructureDefinition.snapshot.element[15].mapping[3].map: value should not start or finish with whitespace</li>
+</ul>
+<p><b>We're expecting these to not match the slice - we're showing how you can use slicing to define the one repetition you want even when many repetitions might be present</b></p><ul>
+ <li>INFORMATION: Patient/example: Patient.name[0]: This element does not match any known slice defined in the profile http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient</li>
+ <li>INFORMATION: Patient/example: Patient.name[1]: This element does not match any known slice defined in the profile http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient</li>
+</ul>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="SD_ED_TYPE_PROFILE_WRONG"> </a>
+<h2>SD_ED_TYPE_PROFILE_WRONG</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-emr-lab-observation.html">/github/workspace/fsh-generated/resources/StructureDefinition-emr-lab-observation.json</a></td><td><b>Profile http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips is for type StructureDefinition[http://hl7.org/fhir/StructureDefinition/Specimen], but the Observation.specimen element has type CodeableConcept</b></td>
+   </tr>
+</table>
+</body>
+</html>
