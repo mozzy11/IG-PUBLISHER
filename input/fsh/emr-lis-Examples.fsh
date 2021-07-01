@@ -8,9 +8,9 @@ Title:   "OpenMRS Patient"
 * identifier[0].use = #official
 * identifier[0].type.text = "iSantePlus ID"
 * identifier[0].value = "10012R"
-* identifier[0].extension.url = "http://fhir.openmrs.org/ext/patient/identifier#location"
-* identifier[0].extension.valueReference.reference = "Location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f"
-* identifier[0].extension.valueReference.type = "Location"
+* identifier.extension.url = "http://fhir.openmrs.org/ext/patient/identifier#location"
+* identifier.extension.valueReference.reference = "Location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f"
+* identifier.extension.valueReference.type = "Location"
 * identifier[0].extension.valueReference.display = "Unknown Location"
 * identifier[1].id = "75a67d54-6fff-44d1-9c3e-2116c967b475"
 * identifier[1].use = #usual
