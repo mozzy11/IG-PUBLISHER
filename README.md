@@ -33,7 +33,3 @@ Open `./output/
 ## Issues
 __https://github.com/pmanko/emr-lis-ig/issues__  
 
-
-
-
-
